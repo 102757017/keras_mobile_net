@@ -1,0 +1,20 @@
+网络中断原因导致keras加载vgg16等模型权重失败， 
+直接解决方法是：删掉下载文件，再重新下载
+
+或者是离线下载权重文件，https://github.com/fchollet/deep-learning-models/releases/download/v0.6/mobilenet_1_0_224_tf.h5
+imagenet_class_index.json类信息文件 https://s3.amazonaws.com/deep-learning-models/image-models/imagenet_class_index.json
+，把得到的文件放在 C:\Users\<你的用户名>\.keras\models里面
+
+
+Windows-weights路径：
+
+C:\Users\你的用户名\.keras\models
+
+Linux-weights路径：
+
+.keras/models/ 
+注意： linux中 带点号的文件都被隐藏了，需要查看hidden文件才能显示
+
+
+G:\Program Files\WinPython-64bit-3.6.1.0Qt5\graphviz\bin
+

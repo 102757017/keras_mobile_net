@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # # -*- coding: UTF-8 -*-
-from keras.preprocessing import image
+from tensorflow.keras.preprocessing import image
 import numpy as np
 import cv2
-from keras.models import load_model
-from keras.applications.mobilenet_v2 import MobileNetV2
-from keras.applications.mobilenet_v2 import preprocess_input, decode_predictions
+from tensorflow.keras.models import load_model
+from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
+from tensorflow.keras.applications.mobilenet_v2 import preprocess_input, decode_predictions
 
 
 #include_top=True，完整的模型
@@ -35,11 +35,3 @@ cv2.imshow("Predicted", src)
 cv2.waitKey()
 
 
-
-from keras.utils import plot_model
-import pydot_ng as pydot
-import os
-
-#给系统添加环境变量，修改的环境变量是临时改变的，当程序停止时修改的环境变量失效（系统变量不会改变）
-os.environ["Path"] += os.pathsep + r"G:\Program Files\WinPython-64bit-3.6.1.0Qt5\graphviz\bin"
-plot_model(model, to_file='模型结构.png',show_shapes=True)

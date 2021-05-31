@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # # -*- coding: UTF-8 -*-
-from keras.applications.mobilenet import MobileNet
-from keras.preprocessing import image
-from keras.applications.mobilenet import preprocess_input, decode_predictions
-from keras.models import Model
+from tensorflow.keras.applications.mobilenet import MobileNet
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.mobilenet import preprocess_input, decode_predictions
+from tensorflow.keras.models import Model
 import numpy as np
 import os
 import tensorflow as tf

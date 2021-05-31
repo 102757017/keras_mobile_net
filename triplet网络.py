@@ -1,24 +1,22 @@
 #!/usr/bin/python
 # # -*- coding: UTF-8 -*-
-from keras.preprocessing import image
+from tensorflow.keras.preprocessing import image
 import numpy as np
 import cv2
-from keras.models import load_model
-from keras.applications.mobilenet import MobileNet
-from keras.applications.mobilenet import preprocess_input, decode_predictions
-from keras.models import Model #导入函数式模型
-from keras.layers import Input #导入输入数据层
+from tensorflow.keras.models import load_model
+from tensorflow.keras.applications.mobilenet import MobileNet
+from tensorflow.keras.applications.mobilenet import preprocess_input, decode_predictions
+from tensorflow.keras.models import Model #导入函数式模型
+from tensorflow.keras.layers import Input #导入输入数据层
 
-from keras.layers import Convolution2D #导入卷积层
-from keras.layers import GlobalAveragePooling2D
-from keras.layers import MaxPooling2D #导入池化层
-from keras.layers import Dense #导入全连接神经层
-from keras.layers import Dropout #导入正则化，Dropout将在训练过程中每次更新参数时按一定概率(rate)随机断开输入神经元
-from keras.layers import Activation #导入激活函数
-import keras
-#from keras.layers import K
-from keras import backend as K
-
+from tensorflow.keras.layers import Convolution2D #导入卷积层
+from tensorflow.keras.layers import GlobalAveragePooling2D
+from tensorflow.keras.layers import MaxPooling2D #导入池化层
+from tensorflow.keras.layers import Dense #导入全连接神经层
+from tensorflow.keras.layers import Dropout #导入正则化，Dropout将在训练过程中每次更新参数时按一定概率(rate)随机断开输入神经元
+from tensorflow.keras.layers import Activation #导入激活函数
+from tensorflow.keras import backend as K
+from tensorflow import keras
 
 def triplet_loss(y_true, y_pred):
     """
@@ -92,7 +90,7 @@ import pydot_ng as pydot
 import os
 
 #给系统添加环境变量，修改的环境变量是临时改变的，当程序停止时修改的环境变量失效（系统变量不会改变）
-os.environ["Path"] += os.pathsep + r"G:\Program Files\WinPython-64bit-3.6.1.0Qt5\graphviz\bin"
+os.environ["Path"] += os.pathsep + r"D:\Program Files\WinPython-64bit-3.6.1.0Qt5\graphviz\bin"
 plot_model(model, to_file='triplet模型结构.png',show_shapes=True)
 
 # 训练模型
